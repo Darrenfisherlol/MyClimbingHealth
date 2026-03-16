@@ -16,8 +16,12 @@ Tech Stack
 - NodeJs (Express)
 - Postgres
 - Google Cloud
-- Figma: [Link]([https://duckduckgo.com "The best search engine for privacy](https://www.figma.com/site/WZr6tK6Ft0LlxRPj6KiaSH/My-Climbing-Health?node-id=0-1&t=TnlPEFNyJVLsztlV-1)")
+- Figma: Figma: [View Design](https://www.figma.com/site/WZr6tK6Ft0LlxRPj6KiaSH/My-Climbing-Health?node-id=0-1&t=TnlPEFNyJVLsztlV-1)
+
+Notes
 - NO AI code - I can use it for brainstorming / thought processing but NO SLOP copy & pasting code
+- I am not a figma chad... just a fullstack / backend dev wanting to be the best at all stacks
+
 
 Project goals
 1. This projects goal is to practive ts and react
