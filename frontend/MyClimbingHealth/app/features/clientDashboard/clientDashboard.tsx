@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate,Link } from 'react-router';
 import MonthlyClimbsChart from "../../component/clientDashboardChart";
-import ActionCard from "../../component/ClientDashboardActionCard";
+import ActionCard from "../../component/clientDashboardActionCard";
 
 
 interface clientDahsboardProps {

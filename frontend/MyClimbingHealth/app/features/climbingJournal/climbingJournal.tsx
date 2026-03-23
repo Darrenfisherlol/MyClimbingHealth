@@ -34,7 +34,7 @@ function CreateNewTrainingPlan() {
 }
 
 
-export default function MyClimb() {
+export default function ClimbingJournal() {
   
 
 
