@@ -61,27 +61,36 @@ export default function PTDashboard() {
                 </div>
                 <div className={"flex-1"}>
                     <div>
-                        Schedule
-                        <div>
-                            <ul>
-                                <li>a</li>
-                                <li>b</li>
-                                <li>c</li>
-                                <li>d</li>
-                                <li>e</li>
-                            </ul>
+                        <h2>Schedule</h2>
+                        <div className={"flex flex-col mt-2"}>
+                            <div className={"flex flex-row"}>
+                                <div>||</div>
+                                <div className={"flex flex-col"}>
+                                    <div>Start time - End Time</div>
+                                    <div>Tom Hilton</div>
+                                    <div>Shoulder Workouts</div>
+
+                                </div>
+
+                            </div>
+                            <div className={"flex flex-row"}>
+                                <div>||</div>
+                                <div className={"flex flex-col"}>
+                                    <div>Start time - End Time</div>
+                                    <div>Alex Beef</div>
+                                    <div>Thumb A-1 Pulley Injury</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                     <div>
-                        Recent Activity
-                        <div>
-                            <ul>
-                                <li>a</li>
-                                <li>b</li>
-                                <li>c</li>
-                                <li>d</li>
-                                <li>e</li>
-                            </ul>
+                        <h2>Recent Activity</h2>
+                        <div className={"flex flex-col mt-2"}>
+                            <div className={"flex flex-row"}>
+                                <div>Icon</div>
+                                <p className={"ml-2"}>Mr. Beef finished stage 1 of Workplan 1 - Shoulders</p>
+                            </div>
                         </div>
                     </div>
                 </div>
