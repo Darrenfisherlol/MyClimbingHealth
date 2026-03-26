@@ -13,7 +13,7 @@ export default [
   ]),
     // Patients / Climbers
   layout("./layouts/patientsLayout.tsx", [
-    route("p/dashboard", "./features/clientDashboard/clientDashboard.tsx"),
-    route("p/climbingjournal", "./features/climbingJournal/climbingJournal.tsx"),
+    route("climber/dashboard", "./features/clientDashboard/clientDashboard.tsx"),
+    route("climber/climbingjournal", "./features/climbingJournal/climbingJournal.tsx"),
   ])
 ] satisfies RouteConfig;

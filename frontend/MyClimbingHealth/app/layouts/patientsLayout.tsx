@@ -6,8 +6,8 @@ export default function AppLayout() {
       <header style={{ padding: "16px", borderBottom: "1px solid #ddd" }}>
         <nav style={{ display: "flex", gap: "20px" }}>
           <Link to="/">Dashboard</Link>
-          <Link to="p/dashboard">Clients</Link>
-          <Link to="p/climbingjournal">My Climbs</Link>
+          <Link to="climber/dashboard">Clients</Link>
+          <Link to="climber/climbingjournal">My Climbs</Link>
         </nav>
       </header>
 

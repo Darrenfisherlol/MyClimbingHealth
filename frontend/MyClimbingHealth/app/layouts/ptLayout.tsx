@@ -20,9 +20,8 @@ export default function AppLayout() {
 
         <div className={"flex flex-row"}>
             {/*<Link to="pt/dashboard">Dashboard</Link>*/}
-            <span className={"pr-2 mt-auto"}>Search</span>
-            <span className={"pr-2 mt-auto"}>Settings</span>
             <span className={"pr-2 mt-auto"}>Profile</span>
+            <span className={"pr-2 mt-auto"}>Settings</span>
         </div>
       </header>
 

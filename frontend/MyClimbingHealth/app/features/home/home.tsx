@@ -24,9 +24,8 @@ export default function Home() {
                     <ul>    
                         <li>--- PT ---</li>
                         <li><Link to="pt/dashboard">PT Dashboard</Link></li>
-                        <li><Link to="pt/dashboard">Patients List</Link></li>
-                        <li><Link to="pt/workoutPlan">Workout Plans</Link></li>
-                        <li><Link to="pt/message">Messaging</Link></li>
+                        <li><Link to="pt/clientlist">Patients List</Link></li>
+                        <li><Link to="pt/workoutplan">Workout Plans</Link></li>
                     </ul>
                 </div>
 
@@ -35,8 +34,8 @@ export default function Home() {
                     <span>Navigate to:</span>
                     <ul>    
                         <li>--- Climbers ---</li>
-                        <li><Link to="p/dashboard">Clients</Link></li>
-                        <li><Link to="p/climbingJournal">My Climbs</Link></li>
+                        <li><Link to="climber/dashboard">Clients</Link></li>
+                        <li><Link to="climber/climbingjournal">My Climbs</Link></li>
                     </ul>
                 </div>
                 
