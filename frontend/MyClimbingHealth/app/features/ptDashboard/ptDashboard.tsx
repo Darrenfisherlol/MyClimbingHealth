@@ -84,12 +84,12 @@ export default function PTDashboard() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className={"mt-4"}>
                         <h2>Recent Activity</h2>
                         <div className={"flex flex-col mt-2"}>
                             <div className={"flex flex-row"}>
                                 <div>Icon</div>
-                                <p className={"ml-2"}>Mr. Beef finished stage 1 of Workplan 1 - Shoulders</p>
+                                <p className={"ml-2"}> Mr. Tuna finished stage 4</p>
                             </div>
                         </div>
                     </div>

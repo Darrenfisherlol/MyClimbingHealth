@@ -7,7 +7,7 @@ export default function AppLayout() {
         <nav style={{ display: "flex", gap: "20px" }}>
           <Link to="/">Dashboard</Link>
           <Link to="p/dashboard">Clients</Link>
-          <Link to="p/climbingJourna">My Climbs</Link>
+          <Link to="p/climbingjournal">My Climbs</Link>
         </nav>
       </header>
 
