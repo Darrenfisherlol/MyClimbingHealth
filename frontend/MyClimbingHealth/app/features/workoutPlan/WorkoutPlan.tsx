@@ -7,7 +7,7 @@ export default function WorkoutPlan(){
     return(
         <>
             <div className="flex flex-col p-4">
-                <h1 className={"text-2xl"}>WorkPlan Library</h1>
+                <h1 className={"text-2xl font-bold "}>WorkPlan Library</h1>
                 <div className="flex flex-row justify-between mt-2">
                     <div className="flex-5">
                         <p style={{width: "75%"}}>Your personalized library of recovery and strengthening workouts</p>
@@ -26,20 +26,7 @@ export default function WorkoutPlan(){
             </div>
 
             <div className={"flex flex-col p-4"}>
-                <div className={"flex flex-row justify-center"}>
-                    <div className={"pr-4"} style={{height:"100px", width: "100%", textAlign:"center", alignContent:'center'}}>
-                        most used 1</div>
-                    <div className={"pr-4"} style={{height:"100px", width: "100%", textAlign:"center", alignContent:'center'}}>
-                        most used 2</div>
-                    <div className={"pr-4"} style={{height:"100px", width: "100%", textAlign:"center", alignContent:'center'}}>
-                        most used 3</div>
-                    <div className={"pr-4"} style={{height:"100px", width: "100%", textAlign:"center", alignContent:'center'}}>
-                        most used 4</div>
-                    <div className={"pr-4"} style={{height:"100px", width: "100%", textAlign:"center", alignContent:'center'}}>
-                        most used 5</div>
-                </div>
-
-                <h2 className={"p-4 text-xl"}>Create a new Work Plan</h2>
+                <h2 className={"pl-4 text-xl"}>Create a new Work Plan</h2>
 
                 <div>
                     <div className={"grid grid-cols-3 gap-4"}>

@@ -10,11 +10,13 @@ export default [
     route("pt/dashboard", "./features/ptDashboard/PtDashboard.tsx"),
     route("pt/clientlist", "./features/patients/Patients.tsx"),
     route("pt/workoutplan", "./features/workoutPlan/WorkoutPlan.tsx"),
+    // FOR COLOR THEORY ONLY
     route("pt/colordesignpage", "./features/colorDesignPage/colorDesignPage.tsx"),
   ]),
-    // Patients ~ Clients ~ Climbers
+    // Patients
   layout("./layouts/PatientsLayout.tsx", [
-    route("climber/dashboard", "./features/clientDashboard/ClientDashboard.tsx"),
-    route("climber/climbingjournal", "./features/climbingJournal/ClimbingJournal.tsx"),
+    route("patient/dashboard", "./features/clientDashboard/ClientDashboard.tsx"),
+    route("patient/climbingjournal", "./features/climbingJournal/ClimbingJournal.tsx"),
+    route("patient/workoutplan", "./features/patientWorkoutPlan/PatientWorkoutPlan.tsx"),
   ])
 ] satisfies RouteConfig;

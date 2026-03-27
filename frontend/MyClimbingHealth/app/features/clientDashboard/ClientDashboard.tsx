@@ -1,39 +1,5 @@
 import React from 'react';
 import { Navigate, Link } from 'react-router';
-import MonthlyClimbsChart from "./ClientDashboardChart";
-import ActionCard from "./ClientDashboardActionCard";
-
-
-interface clientDahsboardProps {
-
-}
-
-var Holds = [
-    "Crimp",
-    "Sloper",
-    "Jug",
-    "Pocket",
-    "Pinch"
-];
-
-const TrainingPlans = [
-    "1 On 1 Off",
-    "1 On 2 Off",
-    "Kilter Borad",
-    "Moon Borad",
-    "Pull ups",
-    "Block Pinch",
-    "Jump & Grads"
-];
-
-function AddToTrainingPlan() {
-
-}
-
-function CreateNewTrainingPlan() {
-
-}
-
 
 export default function ClientDashboard() {
 
@@ -43,10 +9,11 @@ export default function ClientDashboard() {
         <>
             <h1 className='text-2xl'>Client Name Dashboard</h1>
 
-            <div className="flex flex-row justify-center gap-4 m-4">
-                <ActionCard action={"Progression"} link={"./user?id"}></ActionCard>
-                <ActionCard action={"Edit workout plan"} link={"../workplans/workplan?id"}></ActionCard>
-                <ActionCard action={"Message Client"} link={"./message/user?id"}></ActionCard>
+            <div className="flex flex-row justify-evenly m-4">
+                <div>Current WorkPlan</div>
+                <div>Message Pt</div>
+                <div>Message Pt</div>
+
             </div>
 
 
@@ -57,7 +24,6 @@ export default function ClientDashboard() {
                     <div>Last workout: Pull Ups</div>
                 </div>
                 <div className="flex-1">
-                    <MonthlyClimbsChart />
                 </div>
             </div>
 

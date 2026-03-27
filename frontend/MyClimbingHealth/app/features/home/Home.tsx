@@ -34,8 +34,9 @@ export default function Home() {
                     <span>Navigate to:</span>
                     <ul>    
                         <li>--- Climbers ---</li>
-                        <li><Link to="climber/dashboard">Clients</Link></li>
-                        <li><Link to="climber/climbingjournal">My Climbs</Link></li>
+                        <li><Link to="patient/dashboard">Patient Dashboard</Link></li>
+                        <li><Link to="patient/climbingjournal">Climbing Journal</Link></li>
+                        <li><Link to="patient/workoutplan">Workout Plan</Link></li>
                     </ul>
                 </div>
                 

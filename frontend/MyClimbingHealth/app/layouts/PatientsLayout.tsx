@@ -4,11 +4,21 @@ export default function AppLayout() {
   return (
     <div>
       <header style={{ padding: "16px", borderBottom: "1px solid #ddd" }}>
-        <nav style={{ display: "flex", gap: "20px" }}>
-          <Link to="/">Ascent Recovery</Link>
-          <Link to="climber/dashboard">Clients</Link>
-          <Link to="climber/climbingjournal">My Climbs</Link>
-        </nav>
+          <div className={"flex flex-row justify-between"}>
+
+              <nav style={{ display: "flex", gap: "20px" }}>
+                  <Link className={"font-bold"} to="/">Ascent Recovery</Link>
+                  <Link to="patient/dashboard">My Dashboard</Link>
+                  <Link to="patient/climbingjournal">Climbing Journal</Link>
+                  <Link to="patient/workoutPlan">Workout Plan</Link>
+              </nav>
+
+              <div className={"flex flex-row"}>
+                  <span className={"pr-2 mt-auto"}>Profile</span>
+                  <span className={"pr-2 mt-auto"}>Settings</span>
+              </div>
+
+          </div>
       </header>
 
       <main style={{ padding: "20px" }}>
