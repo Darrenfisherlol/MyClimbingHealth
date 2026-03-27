@@ -1,28 +1,41 @@
 ﻿:root {
-    /* Core Colors */
     --color-primary: #002d1c;
     --color-primary-container: #00452e;
     --color-secondary: #4c616c;
     --color-tertiary-container: #6e2200;
-
-    /* Surfaces */
     --color-surface: #f8fafa;
     --color-surface-low: #f2f4f4;
     --color-surface-lowest: #ffffff;
--    --color-surface-highest: rgba(255, 255, 255, 0.8);
-
-    /* Text */
+    --color-surface-highest: rgba(255, 255, 255, 0.8);
     --color-on-surface: #191c1d;
     --color-on-surface-variant: #4c616c;
     --color-on-primary: #ffffff;
-
-    /* Utility */
     --color-outline-variant: rgba(193, 200, 194, 0.15);
-
-    /* Typography */
     --font-display: "Lexend", sans-serif;
     --font-body: "Work Sans", sans-serif;
     --font-mono: "Space Grotesk", monospace;
+
+    --color-error: #ba1a1a;
+    --color-error-container: #ffdad6;
+    --color-on-error: #ffffff;
+    --color-success: #1a6e3f;
+    --color-success-container: #d6f5e3;
+    --color-warning: #7a4f00;
+    --color-warning-container: #ffecd2;
+    /*(derived from tertiary for CTA pops)*/
+    --color-accent: #c84b00;
+    /*(disabled / muted surfaces)*/
+    --color-surface-dim: #d8dada;
+    /*(hover overlay on white cards)*/
+    --color-surface-tint: #002d1c0d;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-pill: 9999px;
+    --shadow-card: 0 1px 4px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.08);
+    --shadow-elevated: 0 8px 32px rgba(0,0,0,.12);
+    --transition-fast: 120ms ease;
+    --transition-base: 220ms ease;
 }
 
 body {

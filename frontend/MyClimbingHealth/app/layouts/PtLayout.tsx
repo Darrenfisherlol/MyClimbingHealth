@@ -14,6 +14,7 @@ export default function AppLayout() {
               <Link to="pt/dashboard" className={"pr-2 mt-auto"}>Dashboard</Link>
               <Link to="pt/clientlist" className={"pr-2 mt-auto"}>Climbers</Link>
               <Link to="pt/workoutplan" className={"pr-2 mt-auto"}>WorkPlan</Link>
+              <Link to="pt/colordesignpage" className={"pr-2 mt-auto"}>Color Design</Link>
           </nav>
       </div>
 

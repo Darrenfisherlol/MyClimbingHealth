@@ -10,8 +10,9 @@ export default [
     route("pt/dashboard", "./features/ptDashboard/PtDashboard.tsx"),
     route("pt/clientlist", "./features/patients/Patients.tsx"),
     route("pt/workoutplan", "./features/workoutPlan/WorkoutPlan.tsx"),
+    route("pt/colordesignpage", "./features/colorDesignPage/colorDesignPage.tsx"),
   ]),
-    // Patients / Climbers
+    // Patients ~ Clients ~ Climbers
   layout("./layouts/PatientsLayout.tsx", [
     route("climber/dashboard", "./features/clientDashboard/ClientDashboard.tsx"),
     route("climber/climbingjournal", "./features/climbingJournal/ClimbingJournal.tsx"),

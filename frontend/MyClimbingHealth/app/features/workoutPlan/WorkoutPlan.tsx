@@ -1,5 +1,6 @@
 import {Fragment} from "react";
 
+import WorkPlanCard from "~/features/workoutPlan/WorkPlanCard";
 
 export default function WorkoutPlan(){
 
@@ -42,86 +43,35 @@ export default function WorkoutPlan(){
 
                 <div>
                     <div className={"grid grid-cols-3 gap-4"}>
-                        <div>
-                            <div className={"justify-center text-center"} style={{height:"50px"}}> image</div>
-                            <p className={"text-lg font-bold text-center"}> Finger Pulley A2-A4 Rehab</p>
-                            <div>
-                                <div className={"flex flex-row justify-evenly"}>
-                                    <div className={"flex flex-col"}>
-                                        <p>Duration </p>
-                                        <p>4 months</p>
-                                    </div>
-                                    <div className={"flex flex-col"}>
-                                        <p>Exercises</p>
-                                        <p>16 Total</p>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
+                        <WorkPlanCard
+                        image={"image"}
+                        workPlanName={"Finger Pulley A2-A4 Rehab"}
+                        duration={"4 months"}
+                        exerciseCount={16}
+                        />
 
-                        <div>
-                            <div className={"justify-center text-center"} style={{height:"50px"}}> image</div>
-                            <p className={"text-lg font-bold text-center"}>Hangboard Basics</p>
-                            <div>
-                                <div className={"flex flex-row justify-evenly"}>
-                                    <div className={"flex flex-col"}>
-                                        <p>Duration </p>
-                                        <p>2 months</p>
-                                    </div>
-                                    <div className={"flex flex-col"}>
-                                        <p>Exercises</p>
-                                        <p>12 Total</p>
-                                    </div>
-                                </div>
+                        <WorkPlanCard
+                            image={"image"}
+                            workPlanName={"Hangboard Basics"}
+                            duration={"2 months"}
+                            exerciseCount={12}
+                        />
 
-                            </div>
-                        </div>
+                        <WorkPlanCard
+                            image={"image"}
+                            workPlanName={"Shoulder Moon Board Strength"}
+                            duration={"8 months"}
+                            exerciseCount={24}
+                        />
 
-                        <div>
-                            <div className={"justify-center text-center"} style={{height:"50px"}}> image</div>
-                            <p className={"text-lg font-bold text-center"}>Shoulder Moon Board Strength</p>
-                            <div>
-                                <div className={"flex flex-row justify-evenly"}>
-                                    <div className={"flex flex-col"}>
-                                        <p>Duration </p>
-                                        <p>6 months</p>
-                                    </div>
-                                    <div className={"flex flex-col"}>
-                                        <p>Exercises</p>
-                                        <p>24 Total</p>
-                                    </div>
-                                </div>
+                        <WorkPlanCard
+                            image={"image"}
+                            workPlanName={"Title of workout Plan"}
+                            duration={"3 months"}
+                            exerciseCount={8}
+                        />
 
-                            </div>
-                        </div>
-
-                        <div>
-                            <div className={"justify-center text-center"} style={{height:"50px"}}> image</div>
-                            <p className={"text-lg font-bold text-center"}> Title of workout Plan</p>
-                            <div>
-                                <div className={"flex flex-row justify-evenly"}>
-                                    <div className={"flex flex-col"}>
-                                        <p>Duration </p>
-                                        <p>6 months</p>
-                                    </div>
-                                    <div className={"flex flex-col"}>
-                                        <p>Exercises</p>
-                                        <p>24 Total</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={"flex flex-col pt-4"}>
-                    <div className={"flex-1"}>
-                        a
-                    </div>
-                    <div className={"flex-2"}>
-                        b
                     </div>
                 </div>
             </div>
