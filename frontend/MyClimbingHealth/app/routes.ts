@@ -2,18 +2,18 @@ import { type RouteConfig, route, layout, index } from "@react-router/dev/routes
 
 export default [
     // Base
-  layout("./layouts/appLayout.tsx", [
-      index("./features/home/home.tsx"),
+  layout("./layouts/AppLayout.tsx", [
+      index("./features/home/Home.tsx"),
   ]),
     // Physical Therapist
-  layout("./layouts/ptLayout.tsx", [
-    route("pt/dashboard", "./features/ptDashboard/ptDashboard.tsx"),
-    route("pt/clientlist", "./features/patients/patients.tsx"),
-    route("pt/workoutplan", "./features/workoutPlan/workoutPlan.tsx"),
+  layout("./layouts/PtLayout.tsx", [
+    route("pt/dashboard", "./features/ptDashboard/PtDashboard.tsx"),
+    route("pt/clientlist", "./features/patients/Patients.tsx"),
+    route("pt/workoutplan", "./features/workoutPlan/WorkoutPlan.tsx"),
   ]),
     // Patients / Climbers
-  layout("./layouts/patientsLayout.tsx", [
-    route("climber/dashboard", "./features/clientDashboard/clientDashboard.tsx"),
-    route("climber/climbingjournal", "./features/climbingJournal/climbingJournal.tsx"),
+  layout("./layouts/PatientsLayout.tsx", [
+    route("climber/dashboard", "./features/clientDashboard/ClientDashboard.tsx"),
+    route("climber/climbingjournal", "./features/climbingJournal/ClimbingJournal.tsx"),
   ])
 ] satisfies RouteConfig;

@@ -1,6 +1,6 @@
 import {Fragment} from "react";
 
-export default function PTDashboard() {
+export default function PtDashboard() {
     return(
         <>
 

@@ -1,0 +1,33 @@
+﻿:root {
+    /* Core Colors */
+    --color-primary: #002d1c;
+    --color-primary-container: #00452e;
+    --color-secondary: #4c616c;
+    --color-tertiary-container: #6e2200;
+
+    /* Surfaces */
+    --color-surface: #f8fafa;
+    --color-surface-low: #f2f4f4;
+    --color-surface-lowest: #ffffff;
+-    --color-surface-highest: rgba(255, 255, 255, 0.8);
+
+    /* Text */
+    --color-on-surface: #191c1d;
+    --color-on-surface-variant: #4c616c;
+    --color-on-primary: #ffffff;
+
+    /* Utility */
+    --color-outline-variant: rgba(193, 200, 194, 0.15);
+
+    /* Typography */
+    --font-display: "Lexend", sans-serif;
+    --font-body: "Work Sans", sans-serif;
+    --font-mono: "Space Grotesk", monospace;
+}
+
+body {
+    background: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-body);
+}
+
