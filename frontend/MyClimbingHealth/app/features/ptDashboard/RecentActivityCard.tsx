@@ -7,7 +7,7 @@ export default function RecentActivityCard({name, event, workPlanName}:{ name:st
             <div>Icon</div>
 
             <div className={"flex flex-col"}>
-                <p className={"ml-2"}>{name}</p>
+                <p className={"ml-2 font-bold"}>{name}</p>
                 <p className={"ml-2"}>{event}</p>
                 <p className={"ml-2"}>{workPlanName}</p>
             </div>

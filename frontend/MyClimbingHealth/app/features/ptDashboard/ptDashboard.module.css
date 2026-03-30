@@ -1,0 +1,58 @@
+
+/* Headline Card*/
+.HeadlineCard{
+    color:  var(--color-primary-container);
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+/*Schedule*/
+.Schedule{
+    color:  var(--color-primary-container);
+    background-color: var(--color-surface-dim);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+.ScheduleCardNext{
+    color:  var(--color-primary-container);
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-md);
+}
+.ScheduleViewButton{
+    color:  var(--color-on-primary);
+    background-color: var(--color-primary);
+    border-radius: var(--radius-sm);
+}
+
+
+/* Watch List*/
+.WatchlistTitle{
+    color:  var(--color-primary);
+}
+
+.WatchListCard{
+    color:  var(--color-primary-container);
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-card-light);
+}
+
+/*Recent Activity*/
+.RecentTitle{
+    color:  var(--color-primary);
+}
+
+.RecentBody
+{
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-card);
+}
+
+.RecentCard{
+    color:  var(--color-primary-container);
+    background-color: var(--color-surface-highest);
+
+}
+

@@ -1,16 +1,18 @@
 import { Outlet, Link } from "react-router";
+import styles from './ptLayout.module.css';
+
 
 export default function AppLayout() {
   return (
     <div>
-      <header className={"flex flex-row justify-between p-2"} style={{ borderBottom: "1px solid #ddd" }}>
+      <header className={`flex flex-row justify-between p-2 ${styles.header}`} style={{ borderBottom: "1px solid #ddd" }}>
 
       <div className={"flex flex-row"}>
-          <h1 className={"text-xl pr-4"}>
+          <h1 className={`text-2xl pr-4 ${styles.Logo}`}>
               <Link to="/">Ascent Recovery</Link>
           </h1>
 
-          <nav className={"flex flex-rows"}>
+          <nav className={`flex flex-rows text-lg ${styles.Nav}`}>
               <Link to="pt/dashboard" className={"pr-2 mt-auto"}>Dashboard</Link>
               <Link to="pt/clientlist" className={"pr-2 mt-auto"}>Climbers</Link>
               <Link to="pt/workoutplan" className={"pr-2 mt-auto"}>WorkPlan</Link>

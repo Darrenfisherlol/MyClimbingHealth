@@ -9,90 +9,64 @@ export default function ClientDashboard() {
         <>
             <h1 className='text-2xl'>Client Name Dashboard</h1>
 
-            <div className="flex flex-row justify-evenly m-4">
-                <div>Current WorkPlan</div>
-                <div>Message Pt</div>
-                <div>Message Pt</div>
+            <div className="flex flex-row">
+                <div className={"flex flex-col flex-3"}>
+                    <div className={"flex flex-col"}>
+                        <h2>Current Work Plan</h2>
+                        <p>desc</p>
+                        <div>progress bar</div>
+                    </div>
+
+                    <div className={"flex flex-col"}>
+                        <h2>Current Workouts</h2>
+                        <div>
+                            <ul>
+                                <li>a</li>
+                                <li>b</li>
+                                <li>c</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div className={"flex flex-col"}>
+                        <h2>Climbing Log</h2>
+                        <div>
+                            <ul>
+                                <li>a</li>
+                                <li>b</li>
+                                <li>c</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={"flex flex-col flex-1"}>
+                    <div className={"flex flex-col"}>
+                        <h2>Rehab Streak</h2>
+                        <div>a b c</div>
+                        <div>e f g</div>
+                    </div>
+
+
+                    <div>
+                        <h2 className={"text-lg font-bold"}>Recovery Metrics</h2>
+                        <div className={"flex flex-col text-lg"}>
+                            <div>Monthly Climbs: 8</div>
+                            <div>Most Common Workout: Kilter Board</div>
+                            <div>Last workout: Pull Ups</div>
+                        </div>
+                    </div>
+
+                    <div className={"flex flex-col"}>
+                        Message
+                    </div>
+                </div>
 
             </div>
-
 
             <div className="flex flex-row gap-4 m-4">
-                <div className="flex-1 flex flex-col text-lg">
-                    <div>Monthly Climbs: 8</div>
-                    <div>Most Common Workout: Kilter Board</div>
-                    <div>Last workout: Pull Ups</div>
-                </div>
-                <div className="flex-1">
-                </div>
             </div>
-
-            <div>
-
-                <h2 className='text-xl mb-4'>
-                    Climbing Stats
-                </h2>
-
-                <div>
-                    <div className="flex flex-col text-lg">
-                        Current Goal:</div>
-                    <span >
-                        Worked on volumne V6s and shoulder work
-                    </span>
-                </div>
-
-                <div>
-                    <div className="flex flex-col text-lg">
-                        Focus:
-                        <span className="text-base">Shoulders</span>
-                    </div>
-                </div>
-
-                <div className="mb-4">
-                    <div className="flex flex-col text-lg">
-                        Rehab:
-                        <span className="text-base">Shoulder Stain</span>
-                    </div>
-
-                </div>
-
-                <div className="flex flex-col">
-                    <h2 className='text-xl mb-4'>
-                        Work Out Plan 1
-                    </h2>
-                    <div className="flex flex-row justify-evenly">
-                        <div className="text-xl">
-                            Warm up
-                            <ul className='text-base'>
-                                <li>Bike</li>
-                                <li>Pull ups</li>
-                                <li>Pinches</li>
-                                <li>V2 Climb</li>
-                                <li>V2 Climb</li>
-                                <li>V3 Climb</li>
-                            </ul>
-                        </div>
-                        <div className="text-xl">
-                            Session
-                            <ul className='text-base'>
-                                <li>V5 - easy - 1 tires</li>
-                                <li>V6 - easy - 1 tires</li>
-                                <li>V6 - medium - 2 tires</li>
-                                <li>V7 - hard - 4 tires</li>
-                                <li>V6 - hard - 5 tires</li>
-                                <li>V6 - medium - 2 tires</li>
-                            </ul>
-                        </div>
-                        <div className="text-xl">
-                            Cool down
-                            <ul className='text-base'>
-                                <li>shoulder across body stretch</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </>
     );
 }

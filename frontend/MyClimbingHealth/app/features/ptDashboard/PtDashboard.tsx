@@ -5,10 +5,12 @@ import ClimberWatchListCard from "~/features/ptDashboard/ClimberWatchListCard";
 import ScheduleListCard from "~/features/ptDashboard/ScheduleListCard";
 import RecentActivityCard from "~/features/ptDashboard/RecentActivityCard";
 
+import styles from "./ptDashboard.module.css";
+
 export default function PtDashboard() {
     return(
         <>
-            <h1 className={"p-4 text-2xl"}> PT Dashboard</h1>
+            <h1 className={"p-4 text-2xl font-bold"}> PT Dashboard</h1>
             <div className={"flex flex-row p-4"}>
                 <div className={"flex-2"}>
 
@@ -24,9 +26,9 @@ export default function PtDashboard() {
 
                     <div className={"flex flex-col"}>
                         {/*<div className={"flex flex-row justify-between"}>*/}
-                        <div className={"flex flex-row justify-between"}>
-                            <h2>Patient Watch List</h2>
-                            <span> View All Patients</span>
+                        <div className={`flex flex-row justify-between font-bold ${styles.WatchlistTitle}`}>
+                            <h2 className={"text-2xl"}>Patient Watch List</h2>
+                            <span className={"flex mt-auto"}> View All Patients</span>
                         </div>
 
                         <div className={"flex flex-col justify-between"}>
@@ -49,9 +51,9 @@ export default function PtDashboard() {
                     </div>
                 </div>
                 <div className={"flex-1"}>
-                    <div>
-                        <h2>Schedule</h2>
-                        <div className={"flex flex-col mt-2"}>
+                    <div className={`p-4 ${styles.Schedule}`}>
+                        <h2 className={`text-2xl`}>Schedule</h2>
+                        <div className={"flex flex-col"}>
                             <ScheduleListCard
                             name={"Tom Hilton"}
                             workPlanName={"Finger pulley training"}
@@ -67,22 +69,24 @@ export default function PtDashboard() {
                                 endTime={"3:00"}
                             />
                         </div>
-                        <div className={"flex justify-center mt-2"}>View Full Schedule</div>
+                        <div className={`flex justify-center mt-4 pt-2 pb-2 ${styles.ScheduleViewButton}`}>View Full Schedule</div>
                     </div>
 
-                    <div className={"mt-4"}>
-                        <h2>Recent Activity</h2>
-                        <div className={"flex flex-col mt-2"}>
+                    <div className={`mt-4`}>
+                        <div className={`p-4 ${styles.RecentBody}`}>
+                            <h2 className={`text-lg font-bold ${styles.RecentTitle}`}>Recent Activity</h2>
+                            <div className={`flex flex-col mt-2 ${styles.RecentTitle}`}>
 
-                            <RecentActivityCard
-                            name={"Mr. Tuna"}
-                            event={"Finished stage 4/8"}
-                            workPlanName={"Finger pulley training"}/>
+                                <RecentActivityCard
+                                    name={"Mr. Tuna"}
+                                    event={"Finished stage 4/8"}
+                                    workPlanName={"Finger pulley training"}/>
 
-                            <RecentActivityCard
-                                name={"Alex Beef"}
-                                event={"Started stage 2/4"}
-                                workPlanName={"Shoulder Strengthening"}/>
+                                <RecentActivityCard
+                                    name={"Alex Beef"}
+                                    event={"Started stage 2/4"}
+                                    workPlanName={"Shoulder Strengthening"}/>
+                            </div>
                         </div>
                     </div>
                 </div>

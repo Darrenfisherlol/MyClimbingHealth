@@ -1,10 +1,12 @@
 import { Outlet, Link } from "react-router";
 
+import styles from './patientsLayout.module.css';
+
 export default function AppLayout() {
   return (
     <div>
-      <header style={{ padding: "16px", borderBottom: "1px solid #ddd" }}>
-          <div className={"flex flex-row justify-between"}>
+      <header className={"p-16"} style={{ borderBottom: "1px solid #ddd" }}>
+          <div className={"flex flex-row justify-between styles.header"}>
 
               <nav style={{ display: "flex", gap: "20px" }}>
                   <Link className={"font-bold"} to="/">Ascent Recovery</Link>

@@ -1,0 +1,14 @@
+.header{
+    color:  var(--color-primary-container);
+    background-color: var(--color-surface);
+}
+
+.Logo{
+    color:  var(--color-primary);
+    background-color: var(--color-surface);
+}
+
+.Nav{
+    color:  var(--color-primary-container);
+    background-color: var(--color-surface);
+}

@@ -32,14 +32,17 @@
     --radius-md: 12px;
     --radius-lg: 20px;
     --radius-pill: 9999px;
-    --shadow-card: 0 1px 4px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.08);
+    --shadow-card: 0 1px 4px rgba(0,45,28,.03), 0 4px 16px rgba(0,45,28,.05);
+    --shadow-card-light: 0 1px 4px rgba(0,45,28,.02), 0 4px 16px rgba(0,45,28,.04);
     --shadow-elevated: 0 8px 32px rgba(0,0,0,.12);
     --transition-fast: 120ms ease;
     --transition-base: 220ms ease;
+    /*font*/
+    --sm-text:12px;
 }
 
 body {
-    background: var(--color-surface);
+    background: var(--color-surface-low);
     color: var(--color-on-surface);
     font-family: var(--font-body);
 }
