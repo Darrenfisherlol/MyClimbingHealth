@@ -4,13 +4,14 @@ import HeadlineCard from "~/features/ptDashboard/HeadlineCard";
 import ClimberWatchListCard from "~/features/ptDashboard/ClimberWatchListCard";
 import ScheduleListCard from "~/features/ptDashboard/ScheduleListCard";
 import RecentActivityCard from "~/features/ptDashboard/RecentActivityCard";
+import WeeklySessionChart from "~/features/ptDashboard/WeeklySessionChart";
 
 import styles from "./ptDashboard.module.css";
 
 export default function PtDashboard() {
     return(
         <>
-            <h1 className={"p-4 text-2xl font-bold"}> PT Dashboard</h1>
+            <h1 className={`p-4 text-2xl font-bold ${styles.PtDashboardHeader}`}> PT Dashboard</h1>
             <div className={"flex flex-row p-4"}>
                 <div className={"flex-2"}>
 
@@ -20,9 +21,7 @@ export default function PtDashboard() {
                         <HeadlineCard header={"New Messages"} value={"3"} />
                     </div>
 
-                    <div style={{height:"400px", width: "100%", textAlign:"center", alignContent:'center'}}>
-                        Chart
-                    </div>
+                    <WeeklySessionChart />
 
                     <div className={"flex flex-col"}>
                         {/*<div className={"flex flex-row justify-between"}>*/}

@@ -1,7 +1,6 @@
 import { Outlet, Link } from "react-router";
 import styles from './ptLayout.module.css';
 
-
 export default function AppLayout() {
   return (
     <div>

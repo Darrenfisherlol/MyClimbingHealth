@@ -1,14 +1,26 @@
-.header{
-    color:  var(--color-primary-container);
-    background-color: var(--color-surface);
+.header {
+    background-color: var(--color-surface-lowest);
+    color: var(--color-primary);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid var(--color-outline-variant);
+    box-shadow: var(--shadow-card);
 }
 
-.Logo{
-    color:  var(--color-primary);
-    background-color: var(--color-surface);
+.Logo {
+    color: var(--color-primary);
 }
 
-.Nav{
-    color:  var(--color-primary-container);
-    background-color: var(--color-surface);
+.Nav a {
+    color: var(--color-secondary);
+    transition: color var(--transition-fast);
+}
+
+.Nav a:hover {
+    color: var(--color-primary);
+}
+
+.ProfileArea {
+    color: var(--color-secondary);
 }

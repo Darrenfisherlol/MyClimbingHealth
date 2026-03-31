@@ -1,0 +1,27 @@
+﻿.WorkPlanCard {
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.WorkPlanCardImage {
+    background-color: var(--color-surface-dim);
+    border-radius: var(--radius-sm);
+}
+
+.WorkPlanCardTitle {
+    color: var(--color-primary);
+}
+
+.WorkPlanCardMeta {
+    color: var(--color-primary-container);
+    border-top: 1px solid var(--color-outline-variant);
+}
+
+.WorkPlanCardMetaLabel {
+    color: var(--color-primary-container);
+}
+
+.Divider {
+    background-color: var(--color-outline-variant);
+}

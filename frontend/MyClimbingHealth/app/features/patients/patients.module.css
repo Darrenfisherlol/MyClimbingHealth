@@ -1,0 +1,32 @@
+﻿.PageTitle {
+    color: var(--color-primary);
+}
+
+.FilterChip {
+    border-radius: var(--radius-pill);
+    border: 1.5px solid var(--color-outline-variant);
+    background-color: var(--color-surface-highest);
+}
+
+.FilterChipActive {
+    border-radius: var(--radius-pill);
+    border: 1.5px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.TableCard {
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.TableHeader {
+    background-color: var(--color-surface-dim);
+    color: var(--color-primary-container);
+}
+
+.TableRow {
+    border-top: 1px solid var(--color-surface-low);
+}

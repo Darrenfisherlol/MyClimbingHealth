@@ -1,4 +1,7 @@
 
+.PtDashboardHeader{
+    color:  var(--color-primary);
+}
 /* Headline Card*/
 .HeadlineCard{
     color:  var(--color-primary-container);

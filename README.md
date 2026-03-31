@@ -16,11 +16,12 @@ Tech Stack
 - NodeJs (Express)
 - Postgres
 - Google Cloud
-- Figma: Figma: [View Design](https://www.figma.com/site/WZr6tK6Ft0LlxRPj6KiaSH/My-Climbing-Health?node-id=0-1&t=TnlPEFNyJVLsztlV-1)
+- Google Stitch + Figma: [View Design](https://www.figma.com/site/WZr6tK6Ft0LlxRPj6KiaSH/My-Climbing-Health?node-id=0-1&t=TnlPEFNyJVLsztlV-1)
 
 Notes
-- NO AI code - I can use it for brainstorming / thought processing but NO SLOP copy & pasting code
-- I am not a figma chad... just a fullstack / backend dev wanting to be the best at all stacks
+- I MUST google and figure out how to implement before ~ the old way ~  
+- AI Code can be used for COPY & PASTE silly boring tasks (styling, table prep, data creating, etc...)
+- I am not a figma / stick / adobe pro... just a fullstack / backend dev wanting to be the amazing at all stacks
 
 
 Project goals
