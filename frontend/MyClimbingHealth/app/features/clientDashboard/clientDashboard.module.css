@@ -1,0 +1,76 @@
+.PageTitle {
+    color: var(--color-primary);
+}
+
+.SectionTitle {
+    color: var(--color-primary);
+}
+
+.Card {
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.CardTitle {
+    color: var(--color-primary);
+}
+
+.SubText {
+    color: var(--color-on-surface-variant);
+}
+
+/* Progress bar */
+.ProgressTrack {
+    background-color: var(--color-surface-dim);
+    border-radius: var(--radius-pill);
+}
+
+.ProgressFill {
+    background-color: var(--color-primary);
+    border-radius: var(--radius-pill);
+}
+
+/* Streak */
+.StreakCard {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.StreakDayDone {
+    background-color: var(--color-on-primary);
+    color: var(--color-primary);
+    border-radius: var(--radius-pill);
+}
+
+.StreakDayPending {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary);
+    border-radius: var(--radius-pill);
+    opacity: 0.4;
+}
+
+/* Stat pills */
+.StatPill {
+    background-color: var(--color-surface-dim);
+    color: var(--color-primary-container);
+    border-radius: var(--radius-md);
+}
+
+.StatLabel {
+    color: var(--color-on-surface-variant);
+}
+
+/* Message box */
+.MessageCard {
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.WorkoutListItem {
+    border-bottom: 1px solid var(--color-outline-variant);
+    color: var(--color-on-surface-variant);
+}

@@ -1,0 +1,62 @@
+.PageTitle {
+    color: var(--color-primary);
+}
+
+.SubText {
+    color: var(--color-on-surface-variant);
+}
+
+.PhaseBadge {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: var(--radius-pill);
+}
+
+.ProgressText {
+    color: var(--color-secondary);
+}
+
+.StageTitle {
+    color: var(--color-primary);
+}
+
+.SideCard {
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    color: var(--color-primary-container);
+}
+
+.SideCardTitle {
+    color: var(--color-primary);
+}
+
+.DownloadWorkout{
+    color: var(--color-tertiary-container);
+}
+/*workout card*/
+
+.WorkoutCard {
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card-light);
+}
+
+.WorkoutImage {
+    background-color: var(--color-surface-dim);
+    border-radius: var(--radius-sm);
+}
+
+.WorkoutTitle {
+    color: var(--color-primary);
+}
+
+.WorkoutDescription {
+    color: var(--color-on-surface-variant);
+}
+
+.WorkoutStatPill {
+    background-color: var(--color-surface-dim);
+    color: var(--color-primary-container);
+    border-radius: var(--radius-pill);
+}

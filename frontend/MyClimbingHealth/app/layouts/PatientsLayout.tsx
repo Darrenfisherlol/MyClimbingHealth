@@ -12,7 +12,7 @@ export default function AppLayout() {
                     <nav className={`flex flex-row gap-4 text-sm ${styles.Nav}`}>
                         <Link to="patient/dashboard">My Dashboard</Link>
                         <Link to="patient/climbingjournal">Climbing Journal</Link>
-                        <Link to="patient/workoutPlan">Workout Plan</Link>
+                        <Link to="patient/workoutplan">Workout Plan</Link>
                     </nav>
                 </div>
                 <div className={`flex flex-row items-center gap-4 text-sm ${styles.ProfileArea}`}>

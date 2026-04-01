@@ -1,18 +1,21 @@
 import {Fragment} from "react";
 import WorkoutCard from "./WorkoutCard";
+import styles from "./patientWorkoutPlan.module.css";
 
 export default function PatientWorkoutPlan(){
 
     return(
-        <>
-        patient workout plan
         <div className="flex flex-col p-4">
-            <h1 className={"text-2xl font-bold "}>WorkPlanTitle</h1>
-            <div className={"flex flex-row justify-between"}>
-                <p>desc about the workout plan</p>
-                <div className={"flex flex-col"}>
-                    <div>Phase 3</div>
-                    <div>25% Completed</div>
+
+            <div className="flex flex-row justify-between mb-4">
+                <div >
+                    <h1 className={`text-2xl font-bold ${styles.PageTitle}`}>WorkPlanTitle</h1>
+                    <p className={`text-sm ${styles.SubText}`}>desc about the workout plan</p>
+                </div>
+
+                <div className="flex flex-col items-end gap-1">
+                    <span className={`text-xs font-semibold px-4 py-2 ${styles.PhaseBadge}`}>Phase 3</span>
+                    <span className={`text-sm ${styles.ProgressText}`}>25% Completed</span>
                 </div>
             </div>
 
@@ -22,15 +25,17 @@ export default function PatientWorkoutPlan(){
                     // Carousel of stages
                 </div>
 
-                <div className="mt-4">
-                    <h2>Stage 3 - stage name</h2>
-                </div>
-
-                <div className={"flex mt-4"}>
+                <div className={"flex mt-2"}>
                     <div className={"flex-4"}>
-                        <div className={"flex flex-col"}>
 
-                            <div> each row is a workout in a workplan</div>
+                        <div className={"flex flex-row justify-between mt-2 mb-4"}>
+                            <h2 className={`text-lg font-bold ${styles.StageTitle}`}>
+                                Stage 3 — Stage Name
+                            </h2>
+                            <button className={`text-sm font-semibold ${styles.DownloadWorkout}`}>Download</button>
+                        </div>
+
+                        <div className={"flex flex-col"}>
 
                             <WorkoutCard
                                 image={"image"}
@@ -62,15 +67,20 @@ export default function PatientWorkoutPlan(){
 
                         </div>
                     </div>
-                    <div className={"flex-1 flex flex-col ml-4 mr-4"}>
-                        <div>Box of This phase desc goal</div>
-                        <div>Tips and Tricks for this week</div>
+
+                    <div className="flex-1 flex flex-col ml-4 gap-4">
+                        <div className={`p-4 ${styles.SideCard}`}>
+                            <h3 className={`text-sm font-semibold mb-2 ${styles.SideCardTitle}`}>Phase Goal</h3>
+                            <p className="text-sm"> current phase goal desc</p>
+                        </div>
+                        <div className={`p-4 ${styles.SideCard}`}>
+                            <h3 className={`text-sm font-semibold mb-2 ${styles.SideCardTitle}`}>Tips & Tricks</h3>
+                            <p className="text-sm">Tips and tricks for one of the workouts</p>
+                        </div>
                     </div>
+
                 </div>
-
-
             </div>
         </div>
-        </>
     );
 }
