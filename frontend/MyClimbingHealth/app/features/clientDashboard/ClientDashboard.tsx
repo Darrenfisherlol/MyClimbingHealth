@@ -27,7 +27,7 @@ export default function ClientDashboard() {
                 Welcome back, Alex
             </h1>
 
-            <div className="flex flex-row gap-4">
+            <div className="flex flex-row gap-4 mt-2">
 
                 {/* ── Left column ── */}
                 <div className="flex flex-col flex-[3] gap-4">
@@ -109,7 +109,7 @@ export default function ClientDashboard() {
                             5 Big booms today, w climb. Keep it up cheif
                         </p>
                         <button className={`text-sm font-semibold ${styles.CardTitle}`}>
-                            Reply
+                            Reply All
                         </button>
                     </div>
 

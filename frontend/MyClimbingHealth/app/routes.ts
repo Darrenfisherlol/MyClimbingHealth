@@ -10,8 +10,6 @@ export default [
     route("pt/dashboard", "./features/ptDashboard/PtDashboard.tsx"),
     route("pt/clientlist", "./features/patients/Patients.tsx"),
     route("pt/workoutplan", "./features/workoutPlan/WorkoutPlan.tsx"),
-    // FOR COLOR THEORY ONLY
-    route("pt/colordesignpage", "./features/colorDesignPage/colorDesignPage.tsx"),
   ]),
     // Patients
   layout("./layouts/PatientsLayout.tsx", [
