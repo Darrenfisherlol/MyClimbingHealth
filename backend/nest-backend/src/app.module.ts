@@ -4,9 +4,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
+// tester
 import { TeaModule } from './tea/tea.module';
-import { TeaController } from './tea/tea.controller';
-import { TeaService } from './tea/tea.service';
+
+import { PatientModule } from './patient/patient.module';
+import { PhysicalTherapistModule } from './physical-therapist/physical-therapist.module';
+import { WorkoutPlanModule } from './workout-plan/workout-plan.module';
+import { WorkoutModule } from './workout/workout.module';
+
 
 
 @Module({
@@ -27,7 +32,11 @@ import { TeaService } from './tea/tea.service';
       // - otherwise you can lose production data.
       synchronize: true,
     }),
-    TeaModule
+    TeaModule,
+    PatientModule,
+    PhysicalTherapistModule,
+    WorkoutPlanModule,
+    WorkoutModule
   ],
   controllers: [
     AppController,

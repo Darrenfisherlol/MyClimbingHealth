@@ -51,7 +51,9 @@ export class TeaService {
   async remove(id: number) {
     const teaDelete = await this.teasRepository.findOneBy({ id });
 
-    if (!teaDelete) return null;
+    if (!teaDelete) {
+      return null;
+    }
     return await this.teasRepository.remove(teaDelete);
   }
 }
