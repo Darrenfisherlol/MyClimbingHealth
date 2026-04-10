@@ -1,5 +1,5 @@
 .header {
-    background-color: var(--color-surface-lowest);
+    background-color: var(--color-surface-low);
     color: var(--color-primary);
     position: sticky;
     top: 0;
@@ -12,15 +12,10 @@
     color: var(--color-primary);
 }
 
-.Nav a {
-    color: var(--color-secondary);
-    transition: color var(--transition-fast);
-}
-
-.Nav a:hover {
+.LinkItem {
     color: var(--color-primary);
 }
 
 .ProfileArea {
-    color: var(--color-secondary);
+    /*color: var(--color-surface-highest);*/
 }

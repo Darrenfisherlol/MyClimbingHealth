@@ -1,10 +1,10 @@
 import { Outlet, Link } from "react-router";
-import styles from './ptLayout.module.css';
+import styles from './layout.module.css';
 
 export default function AppLayout() {
   return (
     <div>
-      <header className={`flex flex-row justify-between p-2 ${styles.header}`} style={{ borderBottom: "1px solid #ddd" }}>
+      <header className={`flex flex-row justify-between p-2 ${styles.header}`}>
 
       <div className={"flex flex-row"}>
           <h1 className={`text-2xl pr-4 ${styles.Logo}`}>

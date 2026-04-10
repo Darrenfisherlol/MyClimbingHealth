@@ -4,8 +4,25 @@ export default [
     // Base
   layout("./layouts/AppLayout.tsx", [
       index("./features/home/Home.tsx"),
+      route("home/product", "./features/product/Product.tsx"),
+      route("home/aboutus", "./features/aboutUs/AboutUs.tsx"),
+
+      route("account/login", "./features/account/Login.tsx"),
+      route("account/createaccount", "./features/account/CreateAccount.tsx"),
+      route("account/forgotPassword", "./features/account/ForgotPassword.tsx"),
+
+      //   route("home/login", "./features/product/Product.tsx"),
+    //   route("home/product", "./features/product/Product.tsx"),
+    //   route("pt/clientlist", "./features/patients/Patients.tsx"),
+    //   route("pt/workoutplan", "./features/workoutPlan/WorkoutPlan.tsx"),
+
   ]),
-    // Physical Therapist
+    // Dev - Admin page
+  // layout("./layouts/HomeLayout.tsx", [
+  //   route("pt/dashboard", "./features/ptDashboard/PtDashboard.tsx"),
+  //   route("pt/clientlist", "./features/patients/Patients.tsx"),
+  //   route("pt/workoutplan", "./features/workoutPlan/WorkoutPlan.tsx"),
+  // ]),
   layout("./layouts/PtLayout.tsx", [
     route("pt/dashboard", "./features/ptDashboard/PtDashboard.tsx"),
     route("pt/clientlist", "./features/patients/Patients.tsx"),

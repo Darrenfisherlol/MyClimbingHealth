@@ -1,0 +1,92 @@
+
+.PageTitle {
+    color: var(--color-primary);
+}
+
+.SubText {
+    color: var(--color-on-surface-variant);
+}
+
+.ButtonMain {
+    background: var(--color-button);
+    color: var(--color-button-text);
+    border-radius: var(--radius-pill);
+}
+
+.ButtonMain:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+.ButtonSecondary {
+    background-color: var(--color-surface-dim);
+    color: var(--color-primary);
+    border-radius: var(--radius-pill);
+}
+
+.ButtonSecondary:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+.MainImage {
+    background-color: var(--color-surface-dim);
+    border-radius: var(--radius-md);
+    color: var(--color-on-surface-variant);
+}
+
+.FeatureBlockVariantLight {
+    background-color: var(--color-warning-container);
+    border-radius: var(--radius-lg);
+    color: var(--color-on-surface-variant);
+}
+
+.FeatureBlockVariantDark {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-surface-variant);
+    border-radius: var(--radius-lg);
+}
+
+.FeatureBlock {
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card-light);
+}
+
+.FeatureBlockTitle {
+    color: var(--color-primary);
+}
+
+.FeatureBlockVariantDarkTitle{
+    color: var(--color-surface-highest);
+}
+.FeatureBlockSub {
+    color: var(--color-on-surface-variant);
+}
+.FeatureBlockSubVariantDark {
+    color: var(--color-surface-low);
+}
+
+.SectionTitle {
+    color: var(--color-primary);
+}
+
+.IconBox {
+    background-color: var(--color-surface-dim);
+    color: var(--color-primary);
+    border-radius: var(--radius-sm);
+}
+
+.SignupCard {
+    background-color: var(--color-surface-highest);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.SignupTitle {
+    color: var(--color-primary);
+}
+
+.SignupSub {
+    color: var(--color-on-surface-variant);
+}
+
