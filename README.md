@@ -2,11 +2,12 @@
 
 ## Intro
 
-My climbing health is a web application that helps climbers track their training and progress.
+My Ascent Health is a web application that helps physical therapist (PT) and climbers track their training and recovery progress.
 
-Focused on providing insight into finger strength, hangboard training, and climbing performance while having the best physicians and physical therapists in the world review your training and provide feedback.
+Ascent Health helps connect the best high impact sport PTs in the community review your data and provide feedback.</br>
+Focused on providing insight into finger strength, hangboard training, and climbing performance while having the best aid right in your app's dashboard.
 
-I recently used a telehealth app for own physical therapy and it was mediocre at best...<br>
+I recently used a PT health app for own therapy and it was MID at best...<br>
 So, I will make my own!
 ## Developer Notes
 
