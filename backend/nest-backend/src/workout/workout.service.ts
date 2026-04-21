@@ -4,8 +4,8 @@ import { UpdateWorkoutDto } from './dto/update-workout.dto';
 import {InjectRepository} from "@nestjs/typeorm";
 
 import {In, Repository} from "typeorm";
-import {Workout} from "./entities/workout.entity";
 import {WorkoutPlan} from "../workout-plan/entities/workout-plan.entity";
+import {Workout} from "./entities/workout.entity";
 
 @Injectable()
 export class WorkoutService {
