@@ -1,7 +1,4 @@
-import { Link } from "react-router";
 import styles from "./home.module.css";
-
-import GeneralFooter from "./../footer/GeneralFooter"
 
 export default function Home() {
     return (
@@ -125,8 +122,6 @@ export default function Home() {
                 </div>
 
             </div>
-
-            <GeneralFooter />
     </>
     );
 }
