@@ -8,12 +8,12 @@ import { Workout } from '../workout/entities/workout.entity';
 import { PhysicalTherapistModule } from '../physical-therapist/physical-therapist.module';
 
 @Module({
-    imports: [
-        TypeOrmModule.forFeature([WorkoutPlan, Workout]),
-        PhysicalTherapistModule,
-    ],
-    controllers: [WorkoutPlanController],
-    providers: [WorkoutPlanService],
-    exports: [WorkoutPlanService],
+  imports: [
+    TypeOrmModule.forFeature([WorkoutPlan, Workout]),
+    PhysicalTherapistModule,
+  ],
+  controllers: [WorkoutPlanController],
+  providers: [WorkoutPlanService],
+  exports: [WorkoutPlanService],
 })
 export class WorkoutPlanModule {}

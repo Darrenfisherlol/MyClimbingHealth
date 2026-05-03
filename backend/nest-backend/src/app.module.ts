@@ -11,10 +11,7 @@ import { AuthModule } from './auth/auth.module';
 import { UserModule } from './users/user.module';
 import { validateEnv } from './config/env.validation';
 
-
-
 @Module({
-
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
@@ -44,13 +41,9 @@ import { validateEnv } from './config/env.validation';
     WorkoutPlanModule,
     WorkoutModule,
     AuthModule,
-    UserModule
+    UserModule,
   ],
-  controllers: [
-    AppController,
-    ],
-  providers: [
-    AppService,
-    ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

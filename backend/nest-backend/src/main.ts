@@ -10,7 +10,10 @@ function corsOriginOption(
 ): boolean | string | RegExp | (string | RegExp)[] {
   const trimmed = raw.trim();
   if (trimmed) {
-    return trimmed.split(',').map((s) => s.trim()).filter(Boolean);
+    return trimmed
+      .split(',')
+      .map((s) => s.trim())
+      .filter(Boolean);
   }
   if (nodeEnv === 'production') {
     return false;
@@ -22,8 +25,10 @@ function corsOriginOption(
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const configService = app.get(ConfigService);
-  const nodeEnv = configService.get<string>('NODE_ENV', { infer: true }) ?? 'development';
-  const corsRaw = configService.get<string>('CORS_ORIGINS', { infer: true }) ?? '';
+  const nodeEnv =
+    configService.get<string>('NODE_ENV', { infer: true }) ?? 'development';
+  const corsRaw =
+    configService.get<string>('CORS_ORIGINS', { infer: true }) ?? '';
   app.enableCors({
     origin: corsOriginOption(corsRaw, nodeEnv),
     credentials: true,
@@ -31,11 +36,13 @@ async function bootstrap() {
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
   const config = new DocumentBuilder()
-      .setTitle('Swagger API test for Climber')
-      .setDescription('Ascent Climbing Health or Health Climb or whatever this is called')
-      .setVersion('1.0')
-      .addBearerAuth()
-      .build();
+    .setTitle('Swagger API test for Climber')
+    .setDescription(
+      'Ascent Climbing Health or Health Climb or whatever this is called',
+    )
+    .setVersion('1.0')
+    .addBearerAuth()
+    .build();
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, documentFactory);
 
@@ -43,10 +50,10 @@ async function bootstrap() {
   // https://docs.nestjs.com/techniques/validation#using-the-built-in-validationpipe
   // then add DTO logic https://github.com/typestack/class-validator#validation-decorators
   app.useGlobalPipes(
-      new ValidationPipe({
-        whitelist: true,
-        forbidUnknownValues: true,
-      }),
+    new ValidationPipe({
+      whitelist: true,
+      forbidUnknownValues: true,
+    }),
   );
 
   const port = configService.get<number>('PORT', { infer: true }) ?? 3000;

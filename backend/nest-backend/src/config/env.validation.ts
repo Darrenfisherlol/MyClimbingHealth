@@ -36,7 +36,8 @@ export function validateEnv(config: Record<string, unknown>): ValidatedEnv {
     jwtSecret = 'RandomKeyItDoesNotMatter';
   }
 
-  const corsOrigins = config.CORS_ORIGINS !== undefined ? String(config.CORS_ORIGINS) : '';
+  const corsOrigins =
+    config.CORS_ORIGINS !== undefined ? String(config.CORS_ORIGINS) : '';
   if (nodeEnv === 'production' && corsOrigins.trim() === '') {
     throw new Error(
       'CORS_ORIGINS must be set in production (comma-separated allowed origins, e.g. https://myapp.com)',

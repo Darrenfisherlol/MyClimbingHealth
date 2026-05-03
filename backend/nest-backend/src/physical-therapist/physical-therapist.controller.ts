@@ -3,7 +3,9 @@ import { PhysicalTherapistService } from './physical-therapist.service';
 
 @Controller('physical-therapist')
 export class PhysicalTherapistController {
-  constructor(private readonly physicalTherapistService: PhysicalTherapistService) {}
+  constructor(
+    private readonly physicalTherapistService: PhysicalTherapistService,
+  ) {}
 
   @Get()
   async findAll() {

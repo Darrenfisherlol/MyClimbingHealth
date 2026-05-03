@@ -1,14 +1,20 @@
-import {IsString, IsNotEmpty, IsInt, IsPositive, IsEmail} from 'class-validator';
+import {
+  IsString,
+  IsNotEmpty,
+  IsInt,
+  IsPositive,
+  IsEmail,
+} from 'class-validator';
 
 export class CreatePatientDto {
-    @IsString()
-    @IsNotEmpty()
-    name: string;
+  @IsString()
+  @IsNotEmpty()
+  name: string;
 
-    @IsEmail()
-    email: string;
+  @IsEmail()
+  email: string;
 
-    @IsInt()
-    @IsPositive()
-    physicalTherapistId: number;
+  @IsInt()
+  @IsPositive()
+  physicalTherapistId: number;
 }

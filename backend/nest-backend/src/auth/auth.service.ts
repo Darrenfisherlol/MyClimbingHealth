@@ -43,10 +43,7 @@ export class AuthService {
     private readonly patientService: PatientService,
   ) {}
 
-  async signIn(
-    email: string,
-    pass: string,
-  ): Promise<{ access_token: string }> {
+  async signIn(email: string, pass: string): Promise<{ access_token: string }> {
     const user = await this.usersService.findOneEmail(email);
     if (!user) {
       throw new UnauthorizedException();
@@ -187,9 +184,7 @@ export class AuthService {
       email: user.email,
       name: user.name,
       role: user.role,
-      physicalTherapist: pt
-        ? { id: pt.id, joinCode: pt.joinCode }
-        : null,
+      physicalTherapist: pt ? { id: pt.id, joinCode: pt.joinCode } : null,
       patient: patient
         ? {
             id: patient.id,

@@ -11,7 +11,9 @@ describe('PhysicalTherapistController', () => {
       providers: [PhysicalTherapistService],
     }).compile();
 
-    controller = module.get<PhysicalTherapistController>(PhysicalTherapistController);
+    controller = module.get<PhysicalTherapistController>(
+      PhysicalTherapistController,
+    );
   });
 
   it('should be defined', () => {
