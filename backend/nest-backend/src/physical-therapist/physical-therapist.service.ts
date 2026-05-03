@@ -1,56 +1,48 @@
-import {
-  NotFoundException,
-  BadRequestException,
-  Injectable } from '@nestjs/common';
-
-import { CreatePhysicalTherapistDto } from './dto/create-physical-therapist.dto';
-import { UpdatePhysicalTherapistDto } from './dto/update-physical-therapist.dto';
-
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { PhysicalTherapist } from "./entities/physical-therapist.entity";
+import { PhysicalTherapist } from './entities/physical-therapist.entity';
 
 @Injectable()
 export class PhysicalTherapistService {
   constructor(
-      @InjectRepository(PhysicalTherapist)
-      private ptRepository: Repository<PhysicalTherapist>,
+    @InjectRepository(PhysicalTherapist)
+    private readonly ptRepository: Repository<PhysicalTherapist>,
   ) {}
-  async create(createPhysicalTherapistDto: CreatePhysicalTherapistDto) {
-    return await this.ptRepository.save(createPhysicalTherapistDto);
+
+  async findByUserId(userId: number): Promise<PhysicalTherapist | null> {
+    return this.ptRepository.findOneBy({ userId });
   }
 
-  async findAll() {
-    return this.ptRepository.find();
+  async findByJoinCode(raw: string): Promise<PhysicalTherapist | null> {
+    const joinCode = raw.trim().toUpperCase();
+    return this.ptRepository.findOneBy({ joinCode });
   }
 
-  async findOne(id: number) {
-    const pt =  await this.ptRepository.findOneBy({ id });
+  async findAll(): Promise<PhysicalTherapist[]> {
+    return this.ptRepository.find({
+      relations: [
+        'user',
+        'patientLinks',
+        'patientLinks.patient',
+        'patientLinks.patient.user',
+      ],
+    });
+  }
 
+  async findOne(id: number): Promise<PhysicalTherapist> {
+    const pt = await this.ptRepository.findOne({
+      where: { id },
+      relations: [
+        'user',
+        'patientLinks',
+        'patientLinks.patient',
+        'patientLinks.patient.user',
+      ],
+    });
     if (!pt) {
       throw new NotFoundException('PT not found');
     }
     return pt;
-  }
-
-  async update(id: number, updatePhysicalTherapistDto: UpdatePhysicalTherapistDto) {
-    const pt = await this.ptRepository.findOneBy({ id });
-
-    if (!pt) {
-      return null;
-    }
-
-    // mass assign issue?? pipeline validation? DTO validation??
-    Object.assign(pt, updatePhysicalTherapistDto);
-    return await this.ptRepository.save(pt)
-  }
-
-  async remove(id: number) {
-    const ptDelete = await this.ptRepository.findOneBy({ id });
-
-    if (!ptDelete) {
-      return null;
-    }
-    return await this.ptRepository.remove(ptDelete);
   }
 }

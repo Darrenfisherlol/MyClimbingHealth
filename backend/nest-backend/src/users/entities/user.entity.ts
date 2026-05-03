@@ -1,4 +1,5 @@
-import {Entity, Column, PrimaryGeneratedColumn, ManyToMany} from 'typeorm';
+import { Exclude } from 'class-transformer';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class User {
@@ -12,9 +13,10 @@ export class User {
     @Column()
     role: 'PT' | 'PATIENT';
 
-    @Column()
+    @Column({ unique: true })
     email: string;
 
+    @Exclude()
     @Column()
     password: string;
 }

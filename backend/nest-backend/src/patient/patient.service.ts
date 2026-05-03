@@ -1,59 +1,57 @@
-import {
-  NotFoundException,
-  BadRequestException,
-  Injectable } from '@nestjs/common';
-
-import { CreatePatientDto } from './dto/create-patient.dto';
-import { UpdatePatientDto } from './dto/update-patient.dto';
-
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Patient } from "./entities/patient.entity";
+import { Patient } from './entities/patient.entity';
+import { PatientTherapistLink } from './entities/patient-therapist-link.entity';
 
 @Injectable()
 export class PatientService {
-
   constructor(
-      @InjectRepository(Patient)
-      private patientRepository: Repository<Patient>,
+    @InjectRepository(Patient)
+    private readonly patientRepository: Repository<Patient>,
+    @InjectRepository(PatientTherapistLink)
+    private readonly linkRepository: Repository<PatientTherapistLink>,
   ) {}
 
-  async create(createPatientDto: CreatePatientDto) {
-    return await this.patientRepository.save(createPatientDto);
+  async findByUserId(userId: number): Promise<Patient | null> {
+    return this.patientRepository.findOne({
+      where: { userId },
+      relations: ['therapistLinks', 'therapistLinks.physicalTherapist'],
+    });
   }
 
-  async findAll() {
-    return this.patientRepository.find();
+  async findAll(): Promise<Patient[]> {
+    return this.patientRepository.find({
+      relations: ['user', 'therapistLinks', 'therapistLinks.physicalTherapist'],
+    });
   }
 
-  async findOne(id: number) {
-    const patient = await this.patientRepository.findOneBy({id});
-
-    if(!patient)
-    {
+  async findOne(id: number): Promise<Patient> {
+    const patient = await this.patientRepository.findOne({
+      where: { id },
+      relations: ['user', 'therapistLinks', 'therapistLinks.physicalTherapist'],
+    });
+    if (!patient) {
       throw new NotFoundException('No patient found');
     }
-
     return patient;
   }
 
-  async update(id: number, updatePatientDto: UpdatePatientDto) {
-    const patient = await this.patientRepository.findOneBy({ id });
-
-    if (!patient) {
-      return null;
+  async linkToTherapist(
+    patientId: number,
+    physicalTherapistId: number,
+  ): Promise<PatientTherapistLink> {
+    const existing = await this.linkRepository.findOne({
+      where: { patientId, physicalTherapistId },
+    });
+    if (existing) {
+      return existing;
     }
-
-    Object.assign(patient, updatePatientDto);
-    return await this.patientRepository.save(patient)
-  }
-
-  async remove(id: number) {
-    const patientDelete = await this.patientRepository.findOneBy({ id });
-
-    if (!patientDelete) {
-      return null;
-    }
-    return await this.patientRepository.remove(patientDelete);
+    return this.linkRepository.save(
+      this.linkRepository.create({
+        patientId,
+        physicalTherapistId,
+      }),
+    );
   }
 }

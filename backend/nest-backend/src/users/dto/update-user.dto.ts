@@ -1,17 +1,17 @@
-import {IsEmail, IsNotEmpty, IsString} from "class-validator";
+import { IsEmail, IsOptional, IsString, MinLength } from 'class-validator';
 
+/** Self-update only (PATCH /users/me). Role is not user-editable on purpose. */
 export class UpdateUserDto {
-
+    @IsOptional()
     @IsString()
-    @IsNotEmpty()
-    name: string;
+    name?: string;
 
+    @IsOptional()
     @IsEmail()
-    @IsNotEmpty()
-    email: string;
+    email?: string;
 
+    @IsOptional()
     @IsString()
-    @IsNotEmpty()
-    password: string;
-
+    @MinLength(8)
+    password?: string;
 }

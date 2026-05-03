@@ -1,21 +1,19 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
-import {PhysicalTherapist} from "../../physical-therapist/entities/physical-therapist.entity";
+import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn, OneToMany } from 'typeorm';
+import { User } from '../../users/entities/user.entity';
+import { PatientTherapistLink } from './patient-therapist-link.entity';
 
 @Entity()
 export class Patient {
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    name: string;
+  @Column({ unique: true })
+  userId: number;
 
-    @Column()
-    email: string;
+  @OneToOne(() => User, { onDelete: 'CASCADE' })
+  @JoinColumn({ name: 'userId' })
+  user: User;
 
-    @Column()
-    physicalTherapistId: number;
-
-    @ManyToOne(() => PhysicalTherapist, (physicalTherapist) => physicalTherapist.patients)
-    @JoinColumn({ name: 'physicalTherapistId' })
-    physicalTherapist: PhysicalTherapist
+  @OneToMany(() => PatientTherapistLink, (link) => link.patient)
+  therapistLinks: PatientTherapistLink[];
 }

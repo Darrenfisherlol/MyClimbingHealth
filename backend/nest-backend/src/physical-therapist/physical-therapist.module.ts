@@ -9,5 +9,6 @@ import { PhysicalTherapist} from "./entities/physical-therapist.entity";
   imports: [TypeOrmModule.forFeature([PhysicalTherapist])],
   controllers: [PhysicalTherapistController],
   providers: [PhysicalTherapistService],
+  exports: [PhysicalTherapistService],
 })
 export class PhysicalTherapistModule {}

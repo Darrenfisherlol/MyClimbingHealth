@@ -1,54 +1,92 @@
-import {Injectable, NotFoundException} from '@nestjs/common';
+import {
+    BadRequestException,
+    Injectable,
+    NotFoundException,
+} from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { In, Repository } from 'typeorm';
+
+import { WorkoutPlan } from './entities/workout-plan.entity';
+import { Workout } from '../workout/entities/workout.entity';
 import { CreateWorkoutPlanDto } from './dto/create-workout-plan.dto';
 import { UpdateWorkoutPlanDto } from './dto/update-workout-plan.dto';
-import {InjectRepository} from "@nestjs/typeorm";
-
-import {Repository} from "typeorm";
-import {WorkoutPlan} from "./entities/workout-plan.entity";
 
 @Injectable()
 export class WorkoutPlanService {
+    constructor(
+        @InjectRepository(WorkoutPlan)
+        private readonly workoutPlanRepository: Repository<WorkoutPlan>,
+        @InjectRepository(Workout)
+        private readonly workoutRepository: Repository<Workout>,
+    ) {}
 
-  constructor(
-    @InjectRepository(WorkoutPlan)
-    private readonly workoutPlanRepository: Repository<WorkoutPlan>,) {
-  }
-  async create(createWorkoutPlanDto: CreateWorkoutPlanDto) {
-    return await this.workoutPlanRepository.save(createWorkoutPlanDto);
-  }
-
-  async findAll() {
-    return await this.workoutPlanRepository.find();
-  }
-
-  async findOne(id: number) {
-    const pt =  await this.workoutPlanRepository.findOneBy({ id });
-
-    if (!pt) {
-      throw new NotFoundException('Workout plan was not found');
+    async create(dto: CreateWorkoutPlanDto, physicalTherapistId: number) {
+        const workouts = await this.resolveOwnedWorkouts(
+            dto.workoutIds,
+            physicalTherapistId,
+        );
+        const plan = this.workoutPlanRepository.create({
+            name: dto.name,
+            physicalTherapistId,
+            workouts,
+        });
+        return this.workoutPlanRepository.save(plan);
     }
-    return pt;
-  }
 
-  async update(id: number, updateWorkoutPlanDto: UpdateWorkoutPlanDto) {
-    const wp = await this.workoutPlanRepository.findOneBy({ id });
-
-    if (!wp) {
-      return null;
+    async findAllForPt(physicalTherapistId: number) {
+        return this.workoutPlanRepository.find({
+            where: { physicalTherapistId },
+            relations: ['workouts'],
+            order: { id: 'ASC' },
+        });
     }
-    //
-    // many to many fix
-    //
-    Object.assign(wp, updateWorkoutPlanDto);
-    return await this.workoutPlanRepository.save(wp)
-  }
 
-  async remove(id: number) {
-    const wp = await this.workoutPlanRepository.findOneBy({ id });
-
-    if (!wp) {
-      return null;
+    async findOneOwned(id: number, physicalTherapistId: number) {
+        const plan = await this.workoutPlanRepository.findOne({
+            where: { id, physicalTherapistId },
+            relations: ['workouts'],
+        });
+        if (!plan) {
+            throw new NotFoundException('Workout plan was not found');
+        }
+        return plan;
     }
-    return await this.workoutPlanRepository.remove(wp);
-  }
+
+    async update(
+        id: number,
+        dto: UpdateWorkoutPlanDto,
+        physicalTherapistId: number,
+    ) {
+        const plan = await this.findOneOwned(id, physicalTherapistId);
+        if (dto.name !== undefined) plan.name = dto.name;
+        if (dto.workoutIds !== undefined) {
+            plan.workouts = await this.resolveOwnedWorkouts(
+                dto.workoutIds,
+                physicalTherapistId,
+            );
+        }
+        return this.workoutPlanRepository.save(plan);
+    }
+
+    async remove(id: number, physicalTherapistId: number) {
+        const plan = await this.findOneOwned(id, physicalTherapistId);
+        await this.workoutPlanRepository.remove(plan);
+    }
+
+    /** Loads workouts by id and rejects any that aren't owned by this PT. */
+    private async resolveOwnedWorkouts(
+        ids: number[] | undefined,
+        physicalTherapistId: number,
+    ): Promise<Workout[]> {
+        if (!ids?.length) return [];
+        const workouts = await this.workoutRepository.find({
+            where: { id: In(ids), physicalTherapistId },
+        });
+        if (workouts.length !== ids.length) {
+            throw new BadRequestException(
+                'Some workouts were not found or do not belong to you',
+            );
+        }
+        return workouts;
+    }
 }
