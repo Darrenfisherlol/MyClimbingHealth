@@ -43,7 +43,15 @@ export default function LoginForm() {
                     (e.g. <span className="font-mono">you@pt.example.com</span> or{" "}
                     <span className="font-mono">you@patient.example.com</span>).
                 </p>
-
+                <div>
+                    <strong>Test logins</strong>
+                    <p>
+                        <span className="font-mono">test@gmail.com</span> → patient,{" "}
+                        <span className="font-mono">test.patient@gmail.com</span> → patient,{" "}
+                        <span className="font-mono">test.pt@gmail.com</span> → PT dashboard.
+                    </p>
+                </div>
+                
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                     <div className="flex flex-col gap-2">
                         <label htmlFor="email" className={`text-sm font-medium ${styles.Label}`}>
@@ -54,7 +62,7 @@ export default function LoginForm() {
                             type="email"
                             required
                             autoComplete="email"
-                            placeholder="you@pt.example.com"
+                            placeholder="test.pt@gmail.com"
                             className={`px-4 py-3 text-sm w-full ${styles.Input}`}
                             value={email}
                             onChange={(event) => setEmail(event.target.value)}

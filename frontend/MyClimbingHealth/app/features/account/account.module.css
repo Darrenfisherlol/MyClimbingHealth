@@ -58,3 +58,29 @@
 .Error {
     color: var(--color-error);
 }
+
+.TypeCard {
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-surface-dim);
+    border-radius: var(--radius-md);
+    color: var(--color-on-surface);
+    transition: border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.TypeCard:hover:not(:disabled) {
+    border-color: var(--color-primary-container);
+    background-color: var(--color-accent-soft);
+}
+
+.TypeCardSelected {
+    border-color: var(--color-primary);
+    background-color: var(--color-accent-soft);
+}
+
+.TypeCardTitle {
+    color: var(--color-primary);
+}
+
+.TypeCardSub {
+    color: var(--color-on-surface-variant);
+}
