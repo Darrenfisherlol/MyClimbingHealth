@@ -1,0 +1,60 @@
+.PageTitle {
+    color: var(--color-primary);
+}
+
+.SubText {
+    color: var(--color-on-surface-variant);
+}
+
+.Card {
+    background: var(--color-surface-highest);
+    border: 1px solid var(--color-surface-dim);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.Hint {
+    background-color: var(--color-surface-dim);
+    color: var(--color-on-surface-variant);
+    border-radius: var(--radius-md);
+}
+
+.Label {
+    color: var(--color-on-surface);
+}
+
+.Input {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    border: 1px solid var(--color-outline-variant);
+    border-radius: var(--radius-md);
+}
+
+.Input:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+    border-color: var(--color-primary);
+}
+
+.ButtonMain {
+    background: var(--color-button);
+    color: var(--color-button-text);
+    border-radius: var(--radius-pill);
+}
+
+.ButtonMain:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+.Link {
+    color: var(--color-primary);
+}
+
+.Link:hover {
+    text-decoration: underline;
+}
+
+.Error {
+    color: var(--color-error);
+}
